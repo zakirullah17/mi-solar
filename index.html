@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI Solar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <!-- <i class="fas fa-solar-panel text-yellow-400 text-3xl mr-2"></i> -->
+                    <span class="font-bold text-xl">MI Solar</span>
+                </div>
+                
+                <!-- Primary Nav -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="hover:text-yellow-400">Home</a>
+                    <a href="#" class="hover:text-yellow-400">About</a>
+                    <a href="#" class="hover:text-yellow-400">Services</a>
+                    <a href="#" class="hover:text-yellow-400">Contact</a>
+                </div>
+                
+                <!-- Secondary Nav -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded-md font-medium transition duration-300">Login</a>
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded-md font-medium transition duration-300">Register</a>
+                </div>
+                
+                <!-- Mobile button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#" class="block py-2 hover:text-yellow-400">Home</a>
+                <a href="#" class="block py-2 hover:text-yellow-400">About</a>
+                <a href="#" class="block py-2 hover:text-yellow-400">Services</a>
+                <a href="#" class="block py-2 hover:text-yellow-400">Contact</a>
+                <div class="mt-4 pt-4 border-t border-gray-700">
+                    <a href="#" class="block py-2 hover:text-yellow-400">Login</a>
+                    <a href="#" class="block bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded-md font-medium text-center mt-2 transition duration-300">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <div class="slider relative">
+        <!-- Slide 1 -->
+        <div class="slide current">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Solar Panel Installation" class="w-full h-full object-cover">
+            <div class="content">
+                <h2>Solar Panel Installation</h2>
+                <p>Professional installation of high-efficiency solar panels for your home or business.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Solar Maintenance" class="w-full h-full object-cover">
+            <div class="content">
+                <h2>Maintenance Services</h2>
+                <p>Keep your solar system running at peak efficiency with our maintenance plans.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Commercial Solutions" class="w-full h-full object-cover">
+            <div class="content">
+                <h2>Commercial Solutions</h2>
+                <p>Custom solar solutions designed for businesses to reduce operational costs.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        
+        <!-- Buttons -->
+        <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Residential Solar" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Residential Solar</h3>
+                        <p class="text-gray-600 mb-4">Custom solar solutions for your home to reduce electricity bills and carbon footprint.</p>
+                        <a href="#" class="text-yellow-500 font-medium hover:text-yellow-600">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Commercial Solar" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Commercial Solar</h3>
+                        <p class="text-gray-600 mb-4">Large-scale solar installations for businesses to cut operational costs and go green.</p>
+                        <a href="#" class="text-yellow-500 font-medium hover:text-yellow-600">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Solar Maintenance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Maintenance & Repair</h3>
+                        <p class="text-gray-600 mb-4">Keep your solar system running efficiently with our expert maintenance services.</p>
+                        <a href="#" class="text-yellow-500 font-medium hover:text-yellow-600">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-16 bg-gray-800 text-white rounded-lg p-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6">Why Choose MI Solar?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-yellow-400">Expertise</h3>
+                        <p class="text-gray-300">With over 15 years in the solar industry, our team has the knowledge and experience to deliver the best solutions for your needs.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-yellow-400">Quality</h3>
+                        <p class="text-gray-300">We use only the highest quality materials and components from trusted manufacturers to ensure long-lasting performance.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-yellow-400">Savings</h3>
+                        <p class="text-gray-300">Our solar solutions can reduce your electricity bills by up to 80%, providing a great return on your investment.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-yellow-400">Support</h3>
+                        <p class="text-gray-300">We offer comprehensive after-sales support and maintenance to keep your system running at peak efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Get a Free Quote</h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Phone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Service</label>
+                            <select id="service" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <option value="">Select a service</option>
+                                <option value="residential">Residential Solar</option>
+                                <option value="commercial">Commercial Solar</option>
+                                <option value="maintenance">Maintenance</option>
+                                <option value="consultation">Consultation</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded-md transition duration-300">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-solar-panel text-yellow-400 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">MI Solar</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Providing sustainable solar energy solutions for homes and businesses since 2020.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Solar Panel Installation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Solar System Maintenance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Commercial Solar Solutions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Energy Storage Systems</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Consultation & Design</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Solar Street, Green City, GC 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-3"></i>
+                            <span class="text-gray-400">+92 315 9343614</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-yellow-400 mr-3"></i>
+                            <span class="text-gray-400">info@khprawonkay.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-yellow-400 mr-3"></i>
+                            <span class="text-gray-400">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 MI Solar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/03159343614" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
