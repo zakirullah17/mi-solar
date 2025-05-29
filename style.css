@@ -30,6 +30,31 @@
             padding: 20px;
             border-radius: 5px;
         }
+
+        /* Services */
+
+         .carousel-container {
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+        }
+        .active-dot {
+            background-color: #f59e0b;
+            transform: scale(1.2);
+        }
+
+        /* Services End  */
+
         .slide.current .content {
             transform: translateX(600px);
             transition: all 0.7s ease-in-out 0.3s;
@@ -75,3 +100,11 @@
             background-color: #128C7E;
             transform: scale(1.1);
         }
+
+
+         .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
