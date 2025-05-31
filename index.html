@@ -100,218 +100,286 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
+
+
         <!-- Services Start  -->
 
 
         <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Professional Solar Installation Services</h2>
-            <p class="mt-4 text-lg text-gray-600">Precision mechanical work for optimal solar system performance</p>
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Professional Solar Installation Services</h2>
+        <p class="mt-4 text-lg text-gray-600">Precision mechanical work for optimal solar system performance</p>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative">
+        <!-- Navigation Arrows -->
+        <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-white p-3 rounded-full shadow-md text-gray-800 hover:text-yellow-500 focus:outline-none transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-white p-3 rounded-full shadow-md text-gray-800 hover:text-yellow-500 focus:outline-none transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Carousel -->
+        <div id="carousel" class="carousel-container overflow-x-auto flex gap-6 pb-8 px-2">
+            <!-- Service 1: Mounting Structure Installation -->
+            <div class="carousel-item w-72 flex-shrink-0">
+                <div class="relative rounded-xl shadow-md overflow-hidden h-80 group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 bg-[url('https://media.istockphoto.com/id/1474579196/photo/alternative-energy-to-conserve-the-worlds-energy.jpg?s=612x612&w=0&k=20&c=_4fVPvPDguwx2qtIYFuQ347qcbpil_OyzSg09f8tvaY=')] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"></div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative h-full flex flex-col justify-end p-5">
+                        <!-- Tag -->
+                        <div class="absolute top-3 left-3 bg-yellow-500 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-tools mr-1"></i> Mechanical
+                        </div>
+                        
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Mounting Structure Installation</h3>
+                        
+                        <!-- Description -->
+                        <div class="bg-black/30 backdrop-blur-sm rounded-lg p-3 mb-3">
+                            <p class="text-gray-100 text-sm" id="desc-1-short">Precision drilling and anchoring of mounting structures...</p>
+                            <p class="text-gray-100 text-sm hidden" id="desc-1-full">Precision drilling and anchoring of mounting structures for solar panels. Our galvanized steel frameworks ensure 25+ years of weather-resistant performance with industry-leading durability.</p>
+                            <button onclick="toggleDescription('desc-1')" class="text-yellow-400 text-xs mt-1 underline">See More</button>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="flex justify-between items-center text-xs">
+                            <div class="text-gray-300 flex items-center">
+                                <i class="fas fa-clock mr-1"></i> 4-6 hours
+                            </div>
+                            <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-3 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Solar Panel Wiring & Connection -->
+            <div class="carousel-item w-72 flex-shrink-0">
+                <div class="relative rounded-xl shadow-md overflow-hidden h-80 group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80')] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"></div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative h-full flex flex-col justify-end p-5">
+                        <!-- Tag -->
+                        <div class="absolute top-3 left-3 bg-blue-500 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-bolt mr-1"></i> Electrical
+                        </div>
+                        
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Panel Wiring & Connection</h3>
+                        
+                        <!-- Description -->
+                        <div class="bg-black/30 backdrop-blur-sm rounded-lg p-3 mb-3">
+                            <p class="text-gray-100 text-sm" id="desc-2-short">Professional mechanical and electrical connection...</p>
+                            <p class="text-gray-100 text-sm hidden" id="desc-2-full">Professional mechanical and electrical connection of solar arrays. Includes weatherproof cable laying, MC4 clamping, and safety insulation to NEC standards for maximum safety and efficiency.</p>
+                            <button onclick="toggleDescription('desc-2')" class="text-yellow-400 text-xs mt-1 underline">See More</button>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="flex justify-between items-center text-xs">
+                            <div class="text-gray-300 flex items-center">
+                                <i class="fas fa-clock mr-1"></i> 3-5 hours
+                            </div>
+                            <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-3 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow">
+                                Request Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Inverter & Battery Setup -->
+            <div class="carousel-item w-72 flex-shrink-0">
+                <div class="relative rounded-xl shadow-md overflow-hidden h-80 group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80')] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"></div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative h-full flex flex-col justify-end p-5">
+                        <!-- Tag -->
+                        <div class="absolute top-3 left-3 bg-green-500 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-cogs mr-1"></i> Hybrid
+                        </div>
+                        
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Inverter & Battery Setup</h3>
+                        
+                        <!-- Description -->
+                        <div class="bg-black/30 backdrop-blur-sm rounded-lg p-3 mb-3">
+                            <p class="text-gray-100 text-sm" id="desc-3-short">Secure mechanical installation of inverters...</p>
+                            <p class="text-gray-100 text-sm hidden" id="desc-3-full">Secure mechanical installation of inverters and battery banks. Includes proper ventilation, seismic bracing, and UL-listed enclosures for safety and optimal performance.</p>
+                            <button onclick="toggleDescription('desc-3')" class="text-yellow-400 text-xs mt-1 underline">See More</button>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="flex justify-between items-center text-xs">
+                            <div class="text-gray-300 flex items-center">
+                                <i class="fas fa-clock mr-1"></i> 5-8 hours
+                            </div>
+                            <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-3 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Custom Structure Fabrication -->
+            <div class="carousel-item w-72 flex-shrink-0">
+                <div class="relative rounded-xl shadow-md overflow-hidden h-80 group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 bg-[url('https://plus.unsplash.com/premium_photo-1671808063208-effbcbde2cf7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzMHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"></div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative h-full flex flex-col justify-end p-5">
+                        <!-- Tag -->
+                        <div class="absolute top-3 left-3 bg-red-500 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-hammer mr-1"></i> Fabrication
+                        </div>
+                        
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Custom Structure Fabrication</h3>
+                        
+                        <!-- Description -->
+                        <div class="bg-black/30 backdrop-blur-sm rounded-lg p-3 mb-3">
+                            <p class="text-gray-100 text-sm" id="desc-4-short">Design and build of custom mounting solutions...</p>
+                            <p class="text-gray-100 text-sm hidden" id="desc-4-full">Design and build of custom mounting solutions for complex roofs or ground installations. Includes CAD design, precision welding, and powder coating for long-lasting durability.</p>
+                            <button onclick="toggleDescription('desc-4')" class="text-yellow-400 text-xs mt-1 underline">See More</button>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="flex justify-between items-center text-xs">
+                            <div class="text-gray-300 flex items-center">
+                                <i class="fas fa-clock mr-1"></i> 1-3 days
+                            </div>
+                            <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-3 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow">
+                                Consult Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: System Maintenance -->
+            <div class="carousel-item w-72 flex-shrink-0">
+                <div class="relative rounded-xl shadow-md overflow-hidden h-80 group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"></div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative h-full flex flex-col justify-end p-5">
+                        <!-- Tag -->
+                        <div class="absolute top-3 left-3 bg-purple-500 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-clipboard-check mr-1"></i> Maintenance
+                        </div>
+                        
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-2 text-white">System Diagnostics</h3>
+                        
+                        <!-- Description -->
+                        <div class="bg-black/30 backdrop-blur-sm rounded-lg p-3 mb-3">
+                            <p class="text-gray-100 text-sm" id="desc-5-short">Comprehensive mechanical inspection including...</p>
+                            <p class="text-gray-100 text-sm hidden" id="desc-5-full">Comprehensive mechanical inspection including torque checks, anti-corrosion treatment, wiring integrity, and structural stability assessments to keep your system running optimally.</p>
+                            <button onclick="toggleDescription('desc-5')" class="text-yellow-400 text-xs mt-1 underline">See More</button>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="flex justify-between items-center text-xs">
+                            <div class="text-gray-300 flex items-center">
+                                <i class="fas fa-clock mr-1"></i> 2-4 hours
+                            </div>
+                            <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-3 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow">
+                                Schedule
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6: Emergency Repair -->
+            <div class="carousel-item w-72 flex-shrink-0">
+                <div class="relative rounded-xl shadow-md overflow-hidden h-80 group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"></div>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative h-full flex flex-col justify-end p-5">
+                        <!-- Tag -->
+                        <div class="absolute top-3 left-3 bg-red-600 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-exclamation-triangle mr-1"></i> 24/7
+                        </div>
+                        
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold mb-2 text-white">Emergency Repair</h3>
+                        
+                        <!-- Description -->
+                        <div class="bg-black/30 backdrop-blur-sm rounded-lg p-3 mb-3">
+                            <p class="text-gray-100 text-sm" id="desc-6-short">Rapid response for storm damage, loose mounts...</p>
+                            <p class="text-gray-100 text-sm hidden" id="desc-6-full">Rapid response for storm damage, loose mounts, or wiring issues. Our certified technicians arrive equipped with all necessary tools and parts to get your system back online quickly.</p>
+                            <button onclick="toggleDescription('desc-6')" class="text-yellow-400 text-xs mt-1 underline">See More</button>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="flex justify-between items-center text-xs">
+                            <div class="text-gray-300 flex items-center">
+                                <i class="fas fa-phone-alt mr-1"></i> 24/7
+                            </div>
+                            <a href="tel:+18005551234" class="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow">
+                                Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Carousel Container -->
-        <div class="relative">
-            <!-- Navigation Arrows -->
-            <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-white p-3 rounded-full shadow-md text-gray-800 hover:text-yellow-500 focus:outline-none transition">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-white p-3 rounded-full shadow-md text-gray-800 hover:text-yellow-500 focus:outline-none transition">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-
-            <!-- Carousel -->
-            <div id="carousel" class="carousel-container overflow-x-auto flex gap-8 pb-8">
-                <!-- Service 1: Mounting Structure Installation -->
-                <div class="carousel-item w-80 md:w-96">
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100 h-full">
-                        <div class="relative">
-                            <img src="https://media.istockphoto.com/id/1474579196/photo/alternative-energy-to-conserve-the-worlds-energy.jpg?s=612x612&w=0&k=20&c=_4fVPvPDguwx2qtIYFuQ347qcbpil_OyzSg09f8tvaY=" 
-                                 alt="Mounting Structure Installation" 
-                                 class="w-full h-48 object-cover">
-                            <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                <i class="fas fa-tools mr-1"></i> Mechanical
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Mounting Structure Installation</h3>
-                            <p class="text-gray-600 mb-4">
-                                Precision drilling and anchoring of mounting structures for solar panels. Our galvanized steel frameworks ensure 25+ years of weather-resistant performance.
-                            </p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-1"></i> 4-6 hours
-                                </div>
-                                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
-                                    Book Now <i class="fas fa-chevron-right ml-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 2: Solar Panel Wiring & Connection -->
-                <div class="carousel-item w-80 md:w-96">
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100 h-full">
-                        <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
-                                 alt="Solar Panel Wiring" 
-                                 class="w-full h-48 object-cover">
-                            <div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                <i class="fas fa-bolt mr-1"></i> Electrical
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Panel Wiring & Connection</h3>
-                            <p class="text-gray-600 mb-4">
-                                Professional mechanical and electrical connection of solar arrays. Includes weatherproof cable laying, MC4 clamping, and safety insulation to NEC standards.
-                            </p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-1"></i> 3-5 hours
-                                </div>
-                                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
-                                    Request Quote <i class="fas fa-chevron-right ml-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3: Inverter & Battery Setup -->
-                <div class="carousel-item w-80 md:w-96">
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100 h-full">
-                        <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
-                                 alt="Inverter Installation" 
-                                 class="w-full h-48 object-cover">
-                            <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                <i class="fas fa-cogs mr-1"></i> Hybrid
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Inverter & Battery Setup</h3>
-                            <p class="text-gray-600 mb-4">
-                                Secure mechanical installation of inverters and battery banks. Includes proper ventilation, seismic bracing, and UL-listed enclosures for safety.
-                            </p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-1"></i> 5-8 hours
-                                </div>
-                                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
-                                    Learn More <i class="fas fa-chevron-right ml-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4: Custom Structure Fabrication -->
-                <div class="carousel-item w-80 md:w-96">
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100 h-full">
-                        <div class="relative">
-                            <img src="https://plus.unsplash.com/premium_photo-1671808063208-effbcbde2cf7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzMHx8fGVufDB8fHx8fA%3D%3D" 
-                                 alt="Custom Solar Mounts" 
-                                 class="w-full h-48 object-cover">
-                            <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                <i class="fas fa-hammer mr-1"></i> Fabrication
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Custom Structure Fabrication</h3>
-                            <p class="text-gray-600 mb-4">
-                                Design and build of custom mounting solutions for complex roofs or ground installations. Includes CAD design, precision welding, and powder coating.
-                            </p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-1"></i> 1-3 days
-                                </div>
-                                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
-                                    Consult Now <i class="fas fa-chevron-right ml-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 5: System Maintenance -->
-                <div class="carousel-item w-80 md:w-96">
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100 h-full">
-                        <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Solar Maintenance" 
-                                 class="w-full h-48 object-cover">
-                            <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                <i class="fas fa-clipboard-check mr-1"></i> Maintenance
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">System Diagnostics & Maintenance</h3>
-                            <p class="text-gray-600 mb-4">
-                                Comprehensive mechanical inspection including torque checks, anti-corrosion treatment, wiring integrity, and structural stability assessments.
-                            </p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-1"></i> 2-4 hours
-                                </div>
-                                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
-                                    Schedule <i class="fas fa-chevron-right ml-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 6: Emergency Repair -->
-                <div class="carousel-item w-80 md:w-96">
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100 h-full">
-                        <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                 alt="Emergency Solar Repair" 
-                                 class="w-full h-48 object-cover">
-                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                <i class="fas fa-exclamation-triangle mr-1"></i> 24/7
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Emergency Mechanical Repair</h3>
-                            <p class="text-gray-600 mb-4">
-                                Rapid response for storm damage, loose mounts, or wiring issues. Our certified technicians arrive equipped with all necessary tools and parts.
-                            </p>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-phone-alt mr-1"></i> 24/7
-                                </div>
-                                <a href="tel:+18005551234" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
-                                    Call Now <i class="fas fa-phone-alt ml-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dots Navigation -->
-            <div class="flex justify-center mt-6 space-x-2" id="dotsContainer">
-                <!-- Dots will be added by JavaScript -->
-            </div>
+        <!-- Dots Navigation -->
+        <div class="flex justify-center mt-6 space-x-2" id="dotsContainer">
+            <!-- Dots will be added by JavaScript -->
         </div>
+    </div>
 
-        <!-- Trust Badges -->
-        <div class="mt-16 flex flex-wrap justify-center items-center gap-8">
-            <div class="flex items-center bg-gray-100 px-6 py-3 rounded-lg">
-                <i class="fas fa-award text-yellow-500 text-2xl mr-3"></i>
-                <span class="font-medium">NABCEP Certified</span>
-            </div>
-            <div class="flex items-center bg-gray-100 px-6 py-3 rounded-lg">
-                <i class="fas fa-shield-alt text-yellow-500 text-2xl mr-3"></i>
-                <span class="font-medium">10-Year Workmanship Warranty</span>
-            </div>
-            <div class="flex items-center bg-gray-100 px-6 py-3 rounded-lg">
-                <i class="fas fa-truck-pickup text-yellow-500 text-2xl mr-3"></i>
-                <span class="font-medium">Same-Day Service Available</span>
-            </div>
+    <!-- Trust Badges -->
+    <div class="mt-16 flex flex-wrap justify-center items-center gap-8">
+        <div class="flex items-center bg-gray-100 px-6 py-3 rounded-lg">
+            <i class="fas fa-award text-yellow-500 text-2xl mr-3"></i>
+            <span class="font-medium">NABCEP Certified</span>
         </div>
-    </section>
+        <div class="flex items-center bg-gray-100 px-6 py-3 rounded-lg">
+            <i class="fas fa-shield-alt text-yellow-500 text-2xl mr-3"></i>
+            <span class="font-medium">10-Year Workmanship Warranty</span>
+        </div>
+        <div class="flex items-center bg-gray-100 px-6 py-3 rounded-lg">
+            <i class="fas fa-truck-pickup text-yellow-500 text-2xl mr-3"></i>
+            <span class="font-medium">Same-Day Service Available</span>
+        </div>
+    </div>
+</section>
 
 
         <!-- Services End  -->
@@ -376,119 +444,10 @@
                 </form>
             </div>
 
-            <!-- Add this section in your main content, before the footer -->
-<section class="py-16 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Solar Projects</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Project Card 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-             alt="Residential Solar Installation" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-xl font-semibold text-gray-800">Green Valley Home</h3>
-            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Completed</span>
-          </div>
-          <p class="text-gray-600 mb-4 flex items-center">
-            <i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>
-            <span>San Francisco, CA</span>
-          </p>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">Installation Type</p>
-            <p class="text-gray-700">Residential Rooftop</p>
-          </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">System Size</p>
-            <p class="text-gray-700">8.5 kW</p>
-          </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">Energy Generated</p>
-            <p class="text-gray-700 font-medium">12,400 kWh/year</p>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-sm text-gray-500">Completed: Jun 2023</span>
-            <a href="#" class="text-yellow-500 hover:text-yellow-600 font-medium">View Details →</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project Card 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
-             alt="Commercial Solar Installation" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-xl font-semibold text-gray-800">Sunny Office Complex</h3>
-            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Completed</span>
-          </div>
-          <p class="text-gray-600 mb-4 flex items-center">
-            <i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>
-            <span>Austin, TX</span>
-          </p>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">Installation Type</p>
-            <p class="text-gray-700">Commercial Ground Mount</p>
-          </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">System Size</p>
-            <p class="text-gray-700">250 kW</p>
-          </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">Energy Generated</p>
-            <p class="text-gray-700 font-medium">350,000 kWh/year</p>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-sm text-gray-500">Completed: Mar 2023</span>
-            <a href="#" class="text-yellow-500 hover:text-yellow-600 font-medium">View Details →</a>
-          </div>
-        </div>
-      </div>
+<!-- Solar Savings Calculator -->
 
-      <!-- Project Card 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-             alt="Agricultural Solar Installation" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-xl font-semibold text-gray-800">Eco Farm Project</h3>
-            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Completed</span>
-          </div>
-          <p class="text-gray-600 mb-4 flex items-center">
-            <i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>
-            <span>Denver, CO</span>
-          </p>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">Installation Type</p>
-            <p class="text-gray-700">Agricultural Solar Canopy</p>
-          </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">System Size</p>
-            <p class="text-gray-700">150 kW</p>
-          </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-500">Energy Generated</p>
-            <p class="text-gray-700 font-medium">210,000 kWh/year</p>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-sm text-gray-500">Completed: Jan 2023</span>
-            <a href="#" class="text-yellow-500 hover:text-yellow-600 font-medium">View Details →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-12">
-      <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-8 rounded-md transition duration-300">
-        View All Projects
-      </a>
-    </div>
-  </div>
-
-
-<!-- Add this section before the footer -->
-<section class="py-16 bg-gray-50">
+<section class="py-16 bg-gray-100">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Solar Savings Calculator</h2>
     
@@ -571,8 +530,9 @@
 </section>
 
 
-<!-- Add this section before the footer -->
-<section class="py-16 bg-white">
+<!-- Frequently Asked Questions  -->
+
+<section class="py-10 bg-white">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h2>
     
@@ -645,71 +605,73 @@
 
 <!-- Testmonial Cards -->
 
-<section class="bg-gray-100 py-12 px-4" id="testimonials">
-  <div class="max-w-6xl mx-auto text-center">
+<section class="bg-gray-100 py-12 px-4 rounded-md" id="testimonials">
+  <div class="max-w-6xl mx-auto text-center relative">
     <h2 class="text-3xl font-bold text-gray-800 mb-10">What Our Clients Say</h2>
     <div class="overflow-hidden relative">
+      <!-- Navigation Arrows -->
+      <button onclick="prevTestimonial()" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-1 z-10 bg-white p-2 rounded-full shadow-md text-gray-800 hover:bg-blue-500 hover:text-white focus:outline-none transition">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button onclick="nextTestimonial()" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 z-10 bg-white p-2 rounded-full shadow-md text-gray-800 hover:bg-blue-500 hover:text-white focus:outline-none transition">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
       <div id="testimonial-wrapper" class="flex transition-transform duration-700">
         <!-- Testimonial Card 1 -->
         <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] px-4">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="bg-white p-6 rounded-lg shadow-md h-full">
             <img src="https://media.istockphoto.com/id/2194078950/photo/profile-picture-of-smiling-confident-arabic-businessman.jpg?s=612x612&w=0&k=20&c=hFoHVfmAgOET8r1unu8uoPvgwLzaFllpz9jeOdBxSgE=" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Client Photo">
             <h4 class="text-xl font-semibold text-gray-700">Ali Khan</h4>
             <p class="text-gray-500 text-sm mt-2">"Excellent service! My solar system was installed on time and performs better than expected."</p>
           </div>
         </div>
+        
         <!-- Testimonial Card 2 -->
         <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] px-4">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="bg-white p-6 rounded-lg shadow-md h-full">
             <img src="https://media.istockphoto.com/id/2205658286/photo/redhead-businessman-day-dreaming-in-the-office.jpg?s=612x612&w=0&k=20&c=h1pWt7RugoXUh9mBgIbv7RPjo5camRLgJN0L0egWhF4=" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Client Photo">
             <h4 class="text-xl font-semibold text-gray-700">Haroon Khan</h4>
             <p class="text-gray-500 text-sm mt-2">"Highly professional team. They explained everything clearly and helped me save a lot on my bill."</p>
           </div>
         </div>
+        
         <!-- Testimonial Card 3 -->
         <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] px-4">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="bg-white p-6 rounded-lg shadow-md h-full">
             <img src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Client Photo">
             <h4 class="text-xl font-semibold text-gray-700">Usman Afridi</h4>
             <p class="text-gray-500 text-sm mt-2">"Very happy with the quality and performance of the solar panels. Great after-sale support too!"</p>
           </div>
         </div>
-
+        
         <!-- Testimonial Card 4 -->
         <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] px-4">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="bg-white p-6 rounded-lg shadow-md h-full">
             <img src="https://media.istockphoto.com/id/1300972574/photo/millennial-male-team-leader-organize-virtual-workshop-with-employees-online.jpg?s=612x612&w=0&k=20&c=uP9rKidKETywVil0dbvg_vAKyv2wjXMwWJDNPHzc_Ug=" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Client Photo">
             <h4 class="text-xl font-semibold text-gray-700">Zahid Ali</h4>
-            <p class="text-gray-500 text-sm mt-2">"Very happy with the quality and performance of the solar panels. Great after-sale support too!"</p>
+            <p class="text-gray-500 text-sm mt-2">"The installation was quick and efficient. My energy bills have reduced by 70%!"</p>
           </div>
         </div>
-
+        
         <!-- Testimonial Card 5 -->
         <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] px-4">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="bg-white p-6 rounded-lg shadow-md h-full">
             <img src="https://media.istockphoto.com/id/2149970248/photo/portrait-of-happy-man-wearing-jeans-shirt.jpg?s=612x612&w=0&k=20&c=DAHavQ6Yihi-EBtSxr37S0BXDVnF0LYkKp1QJebeZ70=" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Client Photo">
             <h4 class="text-xl font-semibold text-gray-700">Asim Kamal</h4>
-            <p class="text-gray-500 text-sm mt-2">"Very happy with the quality and performance of the solar panels. Great after-sale support too!"</p>
+            <p class="text-gray-500 text-sm mt-2">"Excellent customer service and quality products. Would definitely recommend to others."</p>
           </div>
         </div>
-
-         <!-- Testimonial Card 6 -->
+        
+        <!-- Testimonial Card 6 -->
         <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] px-4">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="bg-white p-6 rounded-lg shadow-md h-full">
             <img src="https://media.istockphoto.com/id/1406197730/photo/portrait-of-a-young-handsome-indian-man.jpg?s=612x612&w=0&k=20&c=CncNUTbw6mzGsbojks2Vt0kV85N_pQaI3zaSkBQJFTc=" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Client Photo">
             <h4 class="text-xl font-semibold text-gray-700">Adnan Saeed</h4>
-            <p class="text-gray-500 text-sm mt-2">"Very happy with the quality and performance of the solar panels. Great after-sale support too!"</p>
+            <p class="text-gray-500 text-sm mt-2">"The team was professional and knowledgeable. The system works perfectly!"</p>
           </div>
         </div>
-        
-
-        
       </div>
-    </div>
-    <!-- Navigation Buttons -->
-    <div class="mt-6 flex justify-center gap-4">
-      <button onclick="prevTestimonial()" class="bg-blue-500 text-white px-4 py-2 rounded">Prev</button>
-      <button onclick="nextTestimonial()" class="bg-blue-500 text-white px-4 py-2 rounded">Next</button>
     </div>
   </div>
 </section>

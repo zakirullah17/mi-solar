@@ -1,12 +1,4 @@
- // Mobile Menu Toggle
-        // const mobileMenuButton = document.getElementById('mobile-menu-button');
-        // const mobileMenu = document.getElementById('mobile-menu');
         
-        // mobileMenuButton.addEventListener('click', () => {
-        //     mobileMenu.classList.toggle('hidden');
-        // });
-        
-
         // Mobile Menu Toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -33,8 +25,6 @@ mobileMenuButton.addEventListener('click', () => {
         menuIcon.innerHTML = closeIcon;
     }
 });
-
-        
 
         
         
@@ -204,6 +194,22 @@ mobileMenuButton.addEventListener('click', () => {
             startAutoSlide();
         });
 
+        // See More button
+
+        // Toggle description function
+    function toggleDescription(idPrefix) {
+        const shortDesc = document.getElementById(`${idPrefix}-short`);
+        const fullDesc = document.getElementById(`${idPrefix}-full`);
+        
+        if (shortDesc.classList.contains('hidden')) {
+            shortDesc.classList.remove('hidden');
+            fullDesc.classList.add('hidden');
+        } else {
+            shortDesc.classList.add('hidden');
+            fullDesc.classList.remove('hidden');
+        }
+    }
+
         
         // Services End 
 
@@ -324,18 +330,92 @@ mobileMenuButton.addEventListener('click', () => {
 
 //   Testmonial Cards 
 
+  // const wrapper = document.getElementById('testimonial-wrapper');
+  // let currentSlide = 0;
+
+  // const nextTestimonial = () => {
+  //   currentSlide = (currentSlide + 1) % 3;
+  //   wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  // };
+
+  // const prevTestimonial = () => {
+  //   currentSlide = (currentSlide - 1 + 3) % 3;
+  //   wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  // };
+
+  // // Auto-slide every 5 seconds
+  // setInterval(nextTestimonial, 5000);
+
+
+  document.addEventListener('DOMContentLoaded', function() {
   const wrapper = document.getElementById('testimonial-wrapper');
+  const testimonials = document.querySelectorAll('#testimonial-wrapper > div');
   let currentSlide = 0;
+  let autoSlideInterval;
+  const totalSlides = testimonials.length;
+  const slidesToShow = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
 
-  const nextTestimonial = () => {
-    currentSlide = (currentSlide + 1) % 3;
-    wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
-  };
+  // Initialize carousel
+  function initCarousel() {
+    updateCarousel();
+    startAutoSlide();
+    
+    // Pause on hover
+    wrapper.addEventListener('mouseenter', stopAutoSlide);
+    wrapper.addEventListener('mouseleave', startAutoSlide);
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      updateCarousel();
+    });
+  }
 
-  const prevTestimonial = () => {
-    currentSlide = (currentSlide - 1 + 3) % 3;
-    wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
-  };
+  function updateCarousel() {
+    const slideWidth = 100 / slidesToShow;
+    const translateValue = -currentSlide * slideWidth;
+    wrapper.style.transform = `translateX(${translateValue}%)`;
+  }
 
-  // Auto-slide every 5 seconds
-  setInterval(nextTestimonial, 5000);
+  function nextTestimonial() {
+    if (currentSlide < totalSlides - slidesToShow) {
+      currentSlide++;
+    } else {
+      currentSlide = 0; // Loop back to start
+    }
+    updateCarousel();
+    resetAutoSlide();
+  }
+
+  function prevTestimonial() {
+    if (currentSlide > 0) {
+      currentSlide--;
+    } else {
+      currentSlide = totalSlides - slidesToShow; // Loop to end
+    }
+    updateCarousel();
+    resetAutoSlide();
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextTestimonial, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+
+  // Make functions available globally
+  window.nextTestimonial = nextTestimonial;
+  window.prevTestimonial = prevTestimonial;
+
+  // Initialize
+  initCarousel();
+});
+
+
+  
